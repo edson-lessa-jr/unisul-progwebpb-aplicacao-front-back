@@ -1,0 +1,85 @@
+header section{
+    position: relative;
+    width: 100%;
+    background-color: #3a79ea;
+}
+header section:first-child{
+    font-family: "Arial Black";
+    font-size: xx-large;
+    padding-top: 20px;
+    height: 70px;
+    color: white;
+    text-align: center;
+}
+
+nav ul li{
+    background-color: #3a79ea;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    width: 50%;
+    height: 30px;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: medium;
+}
+nav ul li:hover{
+    cursor: pointer;
+    background-color: #5c90f5;
+}
+main section article:first-child{
+    font-family: "Arial Black";
+    text-align: center;
+    height: 30px;
+    font-size: x-large;
+    padding-top: 15px;
+}
+.formularios{
+    position: relative;
+    top: 40px;
+    width: 400px;
+    left: calc(50% - 200px);
+    border: 1px solid gray;
+    padding: 10px;
+}
+input{
+    width: 95%;
+    height: 25px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #a4a4a4;
+}
+button{
+    width: 100px;
+    height: 30px;
+    background-color: #3a79ea;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    border: 0px;
+}
+.mensagens{
+    position: fixed;
+    top: 135px;
+    width: 200px;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    right: 0px;
+    background-color: #1b61e0;
+    color: white;
+    padding-left: 10px;
+    padding-top: 25px;
+}
+.esconder{
+    visibility: hidden;
+}
+.mensagensErro{
+    color: black !important;
+    background-color: #da5959 !important;
+}
+.loading{
+    position: fixed;
+    left: calc(50% - 10px);
+    top: 50%;
+}
