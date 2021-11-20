@@ -7,12 +7,16 @@
 </head>
 <body>
 <header>
-    <section>Gestão de Seriados</section>
+    <section>Gestão de Seriados PB</section>
     <section>
         <nav>
             <ul>
                 <li id="abrirFormularioCdastroSeriado">Cadastro de Seriado</li>
-                <li>Lista</li>
+                <li id="exibeListaSeriados">Lista Seriado</li>
+                <li id="abrirFormularioCdastroTemporada">Cadastro de Temporada</li>
+                <li id="exibeListaTemporada">Lista Temporada</li>
+                <li id="abrirFormularioCdastroEpisodio">Cadastro de Episódios</li>
+                <li id="exibeListaEpisodio">Lista Episódios</li>
             </ul>
         </nav>
     </section>
@@ -26,7 +30,7 @@
         <article id="fomularioSeriado" class="formularios">
             <form action="#" id="frmCadSeriado">
                 <label for="idSeriado">ID</label>
-                <input type="number" name="nrId" id="idSeriado" min="0">
+                <input type="number" name="nrId" id="idSeriado" min="0" readonly>
                 <label for="nomeSeriado">Nome</label>
                 <input type="text" name="txtNomeSeriado" id="nomeSeriado">
                 <label for="dtLancamentoSeriado">Data de Lançamento</label>
@@ -35,10 +39,128 @@
                 <input type="text" name="txtDescricao" id="descricaoSeriado">
                 <br>
                 <button type="button" id="btnSalvarSeriado">Salvar</button>
+                <button type="button" id="btnAlterarSeriado" class="alterar">Alterar</button>
                 <button type="button" id="btnLimparSeriado">Limpar</button>
+                <button type="button" id="btnExcluirSeriado" class="botaoExcluir">Excluir</button>
+
             </form>
         </article>
     </section>
+    <section id="listaSeriados" class="esconder">
+        <article id="tituloListaSeriado">Listagem Seriados</article>
+        <article id="detalheListaSeriado">
+            <table>
+                <thead>
+                <tr>
+                    <th class="numero">ID</th>
+                    <th>Nome</th>
+                    <th>Data de Lançamento</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="numero">1</td>
+                        <td>The Flash</td>
+                        <td>01/01/2000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <section id="cadTemporada" class="esconder">
+        <article id="tituloTemporada">Cadastro de Temporada</article>
+        <article id="fomularioTemporada" class="formularios">
+            <form action="#" id="frmCadTemporada">
+                <label for="idSeriado">ID</label>
+                <input type="number" name="nrId" id="idTemporada" min="0" readonly>
+                <label>Numero: <input type="number" name="nrNumero" id="numeroTemporada" min="1" value=""></label><br>
+                <label>Descrição: <input type="text" name="txtDescricao" id="descricaoTemporada"></label><br>
+                <label for="dtLancamentoTemporada">Data de Lançamento</label>
+                <input type="date" name="dtLancamento" id="dtLancamentoTemporada"><br>
+                <label>
+                    Seriaddo
+                    <select id="seriadoTemporada" name="selSerie">
+                        <option value="#">-------------------</option>
+                    </select>
+                </label>
+                <br>
+                <button type="button" id="btnSalvarTemporada">Salvar</button>
+                <button type="button" id="btnAlterarTemporada" class="alterar">Alterar</button>
+                <button type="button" id="btnLimparTemporada">Limpar</button>
+                <button type="button" id="btnExcluirTemporada" class="botaoExcluir">Excluir</button>
+
+            </form>
+        </article>
+    </section>
+    <section id="listaTemporada" class="esconder">
+        <article id="tituloListaTemporada">Listagem Temporadas</article>
+        <article id="detalheListaTemporada">
+            <table>
+                <thead>
+                <th>Id</th>
+                <th>Número</th>
+                <th>Descrição</th>
+                <th>Data de Lançamento</th>
+                <th>Série</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="numero">1</td>
+                        <td class="numero">2</td>
+                        <td>Teste</td>
+                        <td>01/01/2020</td>
+                        <td>Seriado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+    <section id="cadEpisodio" class="esconder">
+        <article id="tituloEpisodio">Cadastro de Episódios</article>
+        <article id="fomularioEpisodio" class="formularios">
+            <form action="#" id="frmCadEpisodio">
+                <label for="idEpisodio">Id</label>
+                <input type="number" name="nrId" id="idEpisodio" min="1" readonly>
+
+                <label for="nomeEpisodio">Nome:</label>
+                <input type="text" name="nmEpisodio" id="nomeEpisodio">
+                <label>Numero: <input type="number" name="nrEpisodio" id="numeroEpisodio" min="1" value=""></label><br>
+                <label for="temporadaEpisodio">Temporada</label>
+                <select name="selTemporada" id="temporadaEpisodio">
+                    <option value="">-------------------</option>
+                </select>
+                <br>
+                <button type="button" id="btnSalvarEpisodio">Salvar</button>
+                <button type="button" id="btnAlterarEpisodio" class="alterar">Alterar</button>
+                <button type="button" id="btnLimparEpisodio">Limpar</button>
+                <button type="button" id="btnExcluirEpisodio" class="botaoExcluir">Excluir</button>
+            </form>
+        </article>
+    </section>
+    <section id="listaEpisodio" class="esconder">
+        <article id="tituloListaEpisodio">Listagem Episódios</article>
+        <article id="detalheListaEpisodio">
+            <table>
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Número</th>
+                    <th>Temporada</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="numero">1</td>
+                    <td>Teste episódio</td>
+                    <td class="numero">1</td>
+                    <td>Temporada</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
 </main>
 <footer>
     <div id="wait" class="loading esconder">

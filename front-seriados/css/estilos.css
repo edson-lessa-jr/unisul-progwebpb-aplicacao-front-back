@@ -18,7 +18,7 @@ nav ul li{
     display: block;
     color: white;
     text-align: center;
-    width: 50%;
+    width: 16.6666667%;
     height: 30px;
     padding-top: 15px;
     font-weight: bold;
@@ -28,12 +28,18 @@ nav ul li:hover{
     cursor: pointer;
     background-color: #5c90f5;
 }
+
 main section article:first-child{
     font-family: "Arial Black";
     text-align: center;
     height: 30px;
     font-size: x-large;
     padding-top: 15px;
+}
+main section{
+    position: absolute;
+    top: 125px;
+    left: calc(50% - 200px);
 }
 .formularios{
     position: relative;
@@ -43,7 +49,7 @@ main section article:first-child{
     border: 1px solid gray;
     padding: 10px;
 }
-input{
+input, select{
     width: 95%;
     height: 25px;
     margin-bottom: 10px;
@@ -82,4 +88,44 @@ button{
     position: fixed;
     left: calc(50% - 10px);
     top: 50%;
+}
+#listaSeriados{
+    position: absolute;
+    top: 150px;
+    width: 600px;
+    left: calc(50% - 300px);
+
+}
+table tr{
+    border: 1px solid gray;
+    height: 30px;
+}
+table{
+    position: relative;
+    top: 20px;
+    width: 100%;
+
+}
+th, td{
+    width: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+th{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+.numero{
+    text-align: right !important;
+}
+tbody tr{
+    cursor: pointer;
+}
+
+.botaoExcluir{
+    background-color: #f30202;
+    margin-left: 80px;
+    color: white;
 }
